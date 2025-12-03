@@ -165,7 +165,17 @@
      <footer style="text-align: center;">
         <p>Copyright &copy; 2024 Infinite Loop Company | Design: Tooplate Replica</p>
     </footer>
-</section>    
+</section> 
+<script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+</script>   
 
 </body>
 </html>
